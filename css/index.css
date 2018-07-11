@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black !important;
+  background-image: url("../images/bg.png");
+  background-position: initial;
+  background-size: initial;
+}
+
+.logo {
+  margin: 20px 0 10px 0;
+  width: 70%;
+  height: auto;
+}
+
+.flex-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-box-letters {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
+
+.logo-container {
+  max-height: 50%;
+}
+
+.text {
+  width: 70%;
+}
+
+.text-images {
+  display: none;
+  background-image: url("../images/bg-letters.png");
+  background-size: cover;
+  background-color: black !important;
+  max-width: 70%;
+  height: auto;
+  padding: 15px;
+}
+
+.letter {
+  width: 70pt;
+  height: auto;
+}
+
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn {
+  margin: 10px;
+}
+
+@media (max-width: 700px) {
+  .text,
+  .text-images {
+    max-width: 90%;
+  }
+  .letter {
+    width: 60pt;
+  }
+}
