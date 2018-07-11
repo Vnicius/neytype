@@ -64,9 +64,14 @@ canvas {
 @media (max-width: 700px) {
   .text,
   .text-images {
-    max-width: 90%;
+    max-width: 95%;
   }
   .letter {
     width: 60pt;
   }
+}
+
+header {
+  color: white;
+  padding: 20px;
 }
