@@ -91,5 +91,8 @@ function updateCanvas() {
 function genCanvas() {
   html2canvas(document.getElementById("letters-container")).then(canvas => {
     Canvas2Image.saveAsPNG(canvas);
+    canvas.toBlob(blob => {
+      saveAs(blob, "neytype.png");
+    });
   });
 }
