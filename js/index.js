@@ -2,28 +2,21 @@ function changeTextArea() {
   var tArea = document.getElementById("myTextArea");
   var outDiv = document.getElementById("letters-container");
   var saveButton = document.getElementById("save-btn");
-  var containerDiv = document.getElementById("container");
-  var mark = document.getElementById("mark");
 
   outDiv.style = "display: block;";
-  containerDiv.hidden = true;
-  mark.hidden = true;
-  mark.style = "display: block;";
+
   if (tArea.value === "" || tArea.value.match(/^[\d\s]+$/g)) {
     outDiv.innerHTML = "";
     outDiv.hidden = true;
-    containerDiv.hidden = true;
-    mark.hidden = true;
     saveButton.style = "display: none;";
   } else {
     var textFiltred = filter(tArea.value);
 
     outDiv.hidden = false;
-    containerDiv.hidden = false;
-    mark.hidden = false;
+
     outDiv.innerHTML = `<div class="flex-box"> ${textToImages(
       textFiltred
-    )} </div>`;
+    )} <span id="mark">vnicius.github.io/neytype</span> </div>`;
 
     saveButton.style = "display: block;";
   }
@@ -89,7 +82,7 @@ function updateCanvas() {
 }
 
 function genCanvas() {
-  html2canvas(document.getElementById("container")).then(canvas => {
+  html2canvas(document.getElementById("letters-container")).then(canvas => {
     canvas.toBlob(blob => {
       saveAs(blob, "neytype.png");
     });
