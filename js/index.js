@@ -86,10 +86,10 @@ function genCanvas() {
     //var modal = document.getElementById("modal-body");
     //modal.innerHTML = "";
     //modal.appendChild(canvas);
-    //Canvas2Image.saveAsPNG(canvas);
-    var link = document.getElementById("download-link");
-    link.href = canvas.toDataURL();
-    link.dowload = "neytype";
+    Canvas2Image.saveAsPNG(canvas);
+    //var link = document.getElementById("download-link");
+    //link.href = canvas.toDataURL();
+    //link.dowload = "neytype";
 
     console.log(canvas);
   });
