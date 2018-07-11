@@ -1,19 +1,26 @@
-var ignore = /[\\s]|[\\d]/g;
-
 function changeTextArea() {
   var tArea = document.getElementById("myTextArea");
   var outDiv = document.getElementById("letters-container");
   var saveButton = document.getElementById("save-btn");
+  var containerDiv = document.getElementById("container");
+  var mark = document.getElementById("mark");
+
   outDiv.style = "display: block;";
+  containerDiv.hidden = true;
+  mark.hidden = true;
+  mark.style = "display: block;";
   if (tArea.value === "" || tArea.value.match(/^[\d\s]+$/g)) {
     outDiv.innerHTML = "";
     outDiv.hidden = true;
+    containerDiv.hidden = true;
+    mark.hidden = true;
     saveButton.style = "display: none;";
   } else {
     var textFiltred = filter(tArea.value);
 
     outDiv.hidden = false;
-
+    containerDiv.hidden = false;
+    mark.hidden = false;
     outDiv.innerHTML = `<div class="flex-box"> ${textToImages(
       textFiltred
     )} </div>`;
