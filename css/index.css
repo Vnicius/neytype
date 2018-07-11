@@ -80,10 +80,10 @@ canvas {
   margin: 10px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 721px) {
   .text,
   .text-images {
-    max-width: 95%;
+    max-width: 90%;
   }
   .letter {
     width: 40pt;
