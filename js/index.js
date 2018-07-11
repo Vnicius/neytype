@@ -88,7 +88,7 @@ function genCanvas() {
     //modal.appendChild(canvas);
     //Canvas2Image.saveAsPNG(canvas);
     var link = document.getElementById("download-link");
-    link.href = canva.toDataURL();
+    link.href = canvas.toDataURL();
     link.dowload = "neytype";
 
     console.log(canvas);
