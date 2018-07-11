@@ -18,14 +18,15 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
     <script src="js/html2canvas.min.js"></script>
+    <script src="js/canvas2image.js"></script>
     <script src="js/index.js"></script>
 </head>
 
 <body>
     <div class="flex-box">
-        <header> Ney Type made by
+        <div class="header"> Ney Type made by
             <a href="http://www.lucianojacob.com/"> Luciano Jaboc </a>
-        </header>
+        </div>
         <div class="logo-container flex-box">
             <img class="logo" src="images/logo.png" alt="Ney Type">
         </div>
@@ -36,9 +37,15 @@
         </div>
         <button id="save-btn" style="display: none;" onclick="genCanvas()" type="button" class="btn btn-light" data-toggle="modal"
             data-target="#exampleModal">
-            Salve
+            Save
         </button>
     </div>
+
+    <canvas id="canvas" height="100vh" width="100%">
+
+    </canvas>>
+
+    <a id="link" href=""></a>
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -47,7 +54,7 @@
                 <div class="modal-body flex-box" id="modal-body">
                 </div>
                 <div class="modal-footer">
-
+                    Hold to save or click with the right button and "Save Image As..."!
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>

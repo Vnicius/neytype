@@ -19,7 +19,6 @@ function changeTextArea() {
     )} </div>`;
 
     saveButton.style = "display: block;";
-    //updateCanvas();
   }
 }
 
@@ -87,5 +86,7 @@ function genCanvas() {
     var modal = document.getElementById("modal-body");
     modal.innerHTML = "";
     modal.appendChild(canvas);
+    Canvas2Image.saveAsPNG(canvas);
+    console.log(canvas);
   });
 }
